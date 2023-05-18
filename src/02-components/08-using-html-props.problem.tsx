@@ -1,6 +1,6 @@
-import React from "react";
+import React, { ComponentProps } from "react";
 
-export const Button = ({ className, ...rest }: {}) => {
+export const Button = ({ className, ...rest }: ComponentProps<"button">) => {
   return (
     <button {...rest} className={`default-classname ${className}`}></button>
   );
