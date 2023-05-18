@@ -16,7 +16,7 @@ export const undefinedAsRef = (
     ref={{
       // Type 'undefined' is not assignable to
       // type 'HTMLDivElement | null'.
-      current: undefined,
+      current: null,
     }}
   ></div>
 );
