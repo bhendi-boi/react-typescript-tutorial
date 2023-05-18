@@ -1,12 +1,14 @@
 import { ChangeEventHandler } from "react";
-
-type InputProps = (
+type AllOrNothing<TProps extends Record<string, any>> =
+  | TProps
   | {
-      value: string;
-      onChange: ChangeEventHandler;
-    }
-  | {}
-) & {
+      [K in keyof TProps]?: undefined;
+    };
+
+type InputProps = AllOrNothing<{
+  value: string;
+  onChange: ChangeEventHandler;
+}> & {
   label: string;
 };
 
